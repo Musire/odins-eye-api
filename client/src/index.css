@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #8AFFFF;
+  --silver: #d9d9d9;
+  --mid: #979797;
+  --smoke: #848884;
+  --dark: #444444;
+  --darker: #0A0708;
+  --deep: #030303;
+  --deeper: #000300;
+  --gold: #d9b343;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--deep);
+  color: whitesmoke;
+  overflow-x: hidden;
+}
+
+@layer components{
+  .centered {
+      @apply flex flex-row justify-center items-center
+  }
+
+  .centered-col {
+      @apply flex flex-col justify-center items-center
+  }
+
+  .spaced {
+      @apply flex flex-row justify-between items-center
+  }
+
+  .spaced-col {
+      @apply flex flex-col justify-evenly items-center
+  }
+
+  .evenly {
+      @apply flex flex-row justify-evenly items-center
+  }
+
+  .evenly-col {
+    @apply flex flex-col justify-evenly items-center
+  }
+
+  .invisilink {
+      @apply relative collapse
+  }
+
+  .side-panel {
+    @apply w-[50vw] min-h-screen border-r-2 border-r-smoke
+  }
+
+  .block-container {
+      @apply w-[50vw] min-h-[50vh]
+  }
+
+  .wrapper-container {
+      @apply h-screen w-5/6
+  }
+
+  .form-button {
+    @apply bg-silver py-2 px-4 rounded-lg text-deep hover:cursor-pointer hover:text-[whitesmoke] duration-300
+  }
+
+  .page-container {
+    @apply min-h-screen w-screen
+  }
+
+  .form-input {
+    @apply bg-neutral-200 rounded-xl py-2 px-4 hover:bg-silver duration-300 hover:cursor-pointer
+  }
+
+  .inCall {
+    @apply text-green-500
+  }
+
+  .online {
+    @apply text-[whitesmoke]
+  }
+
+  .break {
+    @apply text-blue-500
+  }
+
+  .lunch {
+    @apply text-blue-500
+  }
+
+  .offline {
+    @apply text-gray-500
+  }
+
+}
